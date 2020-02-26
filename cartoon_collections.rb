@@ -17,21 +17,24 @@ powers.collect do |p|
 end
 
 def long_planeteer_calls(four_words_or_more)# code an argument here
-  # Your code here
-  answer = false 
-  four_words_or_more.each do |w|
-    if w.length > 4 
-      answer = true 
-    # w.any? 
-  end
-  end
-answer 
+four_words_or_more.any? do |w|
+    w.length > 4
 end
+
+#   answer = false 
+#   four_words_or_more.each do |w|
+#     if w.length > 4 
+#       answer = true 
+#     # w.any? 
+#   end
+#   end
+# answer 
+# end
 
 def find_the_cheese(cheese)# code an argument here
   # the array below is here to help
-  cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese.find do |cheese|
+  cheese_types = ["cheddar", "gouda", "camembert"] 
+  cheese.find do |cheese| #
     cheese_types.include?(cheese)
 end
 end
